@@ -1,0 +1,58 @@
+<!--
+    This file is part of "Czy handlowa?" android application.
+
+    "Czy handlowa?" is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 3 of the License, or
+    (at your option) any later version.
+
+    "Czy handlowa?" is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with "Czy handlowa?". If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<resources>
+    <string name="app_name">Czy handlowa?</string>
+    <string name="action_about">O aplikacji</string>
+    <string name="action_settings">Ustawienia</string>
+    <string name="about_app_description">Aplikacja sprawdzająca czy najbliższa niedziela jest handlowa czy nie, wysyła też ostrzegawcze powiadomienia, by zrobić wcześniej zakupy.</string>
+    <string name="about_attribution_app_icon">Ikona aplikacji stworzona przez Freepik z www.flaticon.com na licencji CC 3.0 BY</string>
+    <string name="about_attributions">Atrybucje</string>
+    <string name="about_contact_me">Kontakt</string>
+    <string name="about_copyright">Copyright © %1$d Michał Daniel</string>
+    <string name="about_copyright_and_license"><![CDATA[Copyright & licencja]]></string>
+    <string name="about_file_bug_report">Zgłoś błąd programu</string>
+    <string name="about_find_this_app">Aplikacja online</string>
+    <string name="about_support_suggestions_bug_reports"><![CDATA[Wsparcie, sugestie & zgłaszanie błędów]]></string>
+    <string name="about_personal_website">Strona osobista</string>
+    <string name="about_privacy">Prywatność</string>
+    <string name="about_get_the_source_code">Zobacz kod źródłowy</string>
+    <string name="about_read_privacy_policy">Zobacz politykę prywatności</string>
+    <string name="about_released_under_the_gnu_gpl">Na licencji GNU GPL v3 lub nowszej</string>
+    <string name="about_version_no">Wersja: %1$s</string>
+    <string name="about_version_unknown">Wersja nieznana</string>
+
+    <string name="rate_dialog_cancel">Później</string>
+    <string name="rate_dialog_message">Jeśli lubisz korzystać z tej aplikacji, czy możesz poświęcić chwilę, aby ją ocenić? To nie zajmie więcej niż minutę. Dziękuję za wsparcie miłośniku herbaty!</string>
+    <string name="rate_dialog_rate">Oceń teraz</string>
+    <string name="rate_dialog_thanks">Nie, dzięki</string>
+    <string name="rate_dialog_title">Oceń aplikację</string>
+
+    <string name="settings_display_notifications">Wysyłaj przypomnienia</string>
+    <string name="settings_description_display_notifications">Pokazuj powiadomienia o tym czy sklepy będą jutro otwarte.</string>
+    <string name="shops_closed">Sklepy zamknięte.</string>
+    <string name="shops_open">Dziś handlowa!</string>
+    <string name="shops_closed_long">W tą niedzielę sklepy zamknięte. 😭</string>
+    <string name="shops_open_long">Ta niedziela jest handlowa! 😎</string>
+    <string name="sad_frog_face">Smutna żaba</string>
+    <string name="happy_dancing_crab">Tańczący krab</string>
+    <string name="channel_name">Powiadomienia na dzień przed</string>
+    <string name="channel_description">Pokazuj powiadomienia o tym czy sklepy będą jutro otwarte</string>
+    <string name="left_arrow">Strzałka w lewo, przesówa kalendarz</string>
+    <string name="right_arrow">Strzałka w prawo arrow, przesówa kalendarz</string>
+
+</resources>

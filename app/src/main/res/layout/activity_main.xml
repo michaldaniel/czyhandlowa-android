@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    This file is part of "Czy handlowa?" android application.
+
+    "Czy handlowa?" is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 3 of the License, or
+    (at your option) any later version.
+
+    "Czy handlowa?" is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with "Czy handlowa?". If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="Model"
+            type="eu.morningbird.czyhandlowa.model.MainActivityModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        tools:context=".view.MainActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:outlineProvider="background"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:elevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:paddingTop="@dimen/appbar_padding_top"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:title="@string/app_name">
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <TextView
+            android:id="@+id/shopsOpenTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="32dp"
+            android:text="@{Model.shopsOpen ? @string/shops_open_long : @string/shops_closed_long}"
+            android:textAlignment="center"
+            android:textColor="@{Model.shopsOpen ? @color/colorOpen : @color/colorClosed}"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/calendarMonthTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shopsOpenImageView"
+            tools:text="@string/shops_closed_long"
+            tools:textColor="@color/colorClosed" />
+
+        <ImageView
+            android:id="@+id/shopsOpenImageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@{Model.shopsOpen ? @string/happy_dancing_crab : @string/sad_frog_face}"
+            android:src="@{Model.shopsOpen ? @drawable/ic_emoji_crab : @drawable/ic_emoji_frog_face}"
+            app:animation="@{Model.shopsOpen}"
+            app:layout_constraintBottom_toTopOf="@+id/shopsOpenTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appbar"
+            tools:src="@drawable/ic_emoji_frog_face" />
+
+        <com.github.sundeepk.compactcalendarview.CompactCalendarView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/eventsCalendar"
+            android:layout_width="match_parent"
+            android:layout_height="236dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:compactCalendarBackgroundColor="@android:color/transparent"
+            app:compactCalendarCurrentDayBackgroundColor="@color/colorClosed"
+            app:compactCalendarCurrentSelectedDayBackgroundColor="@android:color/transparent"
+            app:compactCalendarCurrentSelectedDayIndicatorStyle="fill_large_indicator"
+            app:compactCalendarEventIndicatorStyle="fill_large_indicator"
+            app:compactCalendarMultiEventIndicatorColor="@color/colorOpen"
+            app:compactCalendarTargetHeight="236dp"
+            app:compactCalendarTextColor="@android:color/primary_text_dark"
+            app:compactCalendarTextSize="12sp"
+            app:dateCurrentDayBackgroundColor="@{Model.calendarDate}"
+            app:dateSelectedDayBackgroundColor="@{Model.selectedDayDate}"
+            app:events="@{Model.calendarDate}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/calendarMonthTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:text="@{Model.month}"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/eventsCalendar"
+            app:layout_constraintEnd_toStartOf="@+id/calendarRightButton"
+            app:layout_constraintStart_toEndOf="@+id/calendarLeftButton"
+            tools:text="September" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/calendarLeftButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/transparent"
+            android:elevation="0dp"
+            android:onClick="@{Model::calendarLeftButtonOnClick}"
+            android:outlineProvider="background"
+            app:backgroundTint="@android:color/transparent"
+            app:borderWidth="0dp"
+            app:contentDescription="@string/left_arrow"
+            app:elevation="0dp"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toBottomOf="@+id/calendarMonthTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/calendarMonthTextView"
+            app:pressedTranslationZ="0dp"
+            app:rippleColor="@android:color/transparent"
+            app:srcCompat="@drawable/ic_chevron_left" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/calendarRightButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/transparent"
+            android:contentDescription="@string/right_arrow"
+            android:elevation="0dp"
+            android:onClick="@{Model::calendarRightButtonOnClick}"
+            android:outlineProvider="background"
+            app:backgroundTint="@android:color/transparent"
+            app:borderWidth="0dp"
+            app:elevation="0dp"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toBottomOf="@+id/calendarMonthTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/calendarMonthTextView"
+            app:pressedTranslationZ="0dp"
+            app:rippleColor="@android:color/transparent"
+            app:srcCompat="@drawable/ic_chevron_right" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
