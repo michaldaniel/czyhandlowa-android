@@ -13,6 +13,11 @@ Checks if shops are open next Sunday and sends notification reminding you to do 
 * [Google Play Store](https://play.google.com/store/apps/details?id=eu.morningbird.czyhandlowa)
 * [Source code from Github](https://github.com/michaldaniel/czyhandlowa-android/archive/master.zip)
 
+
+### Screenshots
+
+<img src="https://user-images.githubusercontent.com/1345297/52524563-994e2100-2c9e-11e9-9ca0-b2b751ec16ee.png" alt="screenshot" width="256"/> <img src="https://user-images.githubusercontent.com/1345297/52524564-994e2100-2c9e-11e9-9b84-155b00e1e72c.png" alt="screenshot" width="256"/> <img src="https://user-images.githubusercontent.com/1345297/52524575-b71b8600-2c9e-11e9-8e73-c259685ae829.png" alt="screenshot" width="256"/>
+
 ### Support
 
 #### [Report a bug 🐛](https://github.com/michaldaniel/czyhandlowa-android/issues/new)
