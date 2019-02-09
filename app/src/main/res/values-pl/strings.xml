@@ -45,7 +45,7 @@
     <string name="settings_display_notifications">Wysyłaj przypomnienia</string>
     <string name="settings_description_display_notifications">Pokazuj powiadomienia o tym czy sklepy będą jutro otwarte.</string>
     <string name="shops_closed">Sklepy zamknięte.</string>
-    <string name="shops_open">Dziś handlowa!</string>
+    <string name="shops_open">Jest handlowa!</string>
     <string name="shops_closed_long">W tą niedzielę sklepy zamknięte. 😭</string>
     <string name="shops_open_long">Ta niedziela jest handlowa! 😎</string>
     <string name="sad_frog_face">Smutna żaba</string>

@@ -28,7 +28,6 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.JobIntentService
 import androidx.core.app.NotificationCompat
-import androidx.legacy.content.WakefulBroadcastReceiver
 import eu.morningbird.czyhandlowa.CzyHandlowaApplication
 import eu.morningbird.czyhandlowa.R
 import eu.morningbird.czyhandlowa.util.ShoppingSunday
@@ -67,17 +66,14 @@ class NotificationIntentService : JobIntentService() {
 
     override fun onHandleWork(intent: Intent) {
         Log.d(javaClass.simpleName, "onHandleWork, started handling a notification event")
-        try {
-            val action = intent.action
-            if (ACTION_START == action) {
-                processStartNotification()
-            }
-            if (ACTION_DELETE == action) {
-                processDeleteNotification()
-            }
-        } finally {
-            WakefulBroadcastReceiver.completeWakefulIntent(intent)
+        val action = intent.action
+        if (ACTION_START == action) {
+            processStartNotification()
         }
+        if (ACTION_DELETE == action) {
+            processDeleteNotification()
+        }
+
     }
 
     private fun processDeleteNotification() {

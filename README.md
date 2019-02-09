@@ -6,7 +6,7 @@
 
 ### About
 
-Checks if shops are open next sunday and sends notification reminding you to do your shopping early.
+Checks if shops are open next Sunday and sends notification reminding you to do your shopping early.
 
 ### Get it
 
